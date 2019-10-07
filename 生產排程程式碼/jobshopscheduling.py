@@ -284,6 +284,7 @@ class Scheduler:
 		return plotly.offline.plot(fig, include_plotlyjs = False, output_type='div')
         
 	def OutputSchedule(self):
+		# 輸出排程資訊
 		m_keys=[j+1 for j in range(self.__num_mc)]
 		j_keys=[j for j in range(self.__num_job)]
 		key_count={key:0 for key in j_keys}
