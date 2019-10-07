@@ -1,11 +1,5 @@
 """
 ===== Original Version Code: https://github.com/wurmen/Genetic-Algorithm-for-Job-Shop-Scheduling-and-NSGA-II/blob/master/implementation%20with%20python/GA-jobshop/GA_jobshop_makespan.py
-===== Original Author's Information =====
-Original Author: cheng-man wu
-LinkedIn: www.linkedin.com/in/chengmanwu
-Github: https://github.com/wurmen
-=====
-===== Adaptor: James, NTUST-IM
 """
 import numpy as np
 import pandas as pd
