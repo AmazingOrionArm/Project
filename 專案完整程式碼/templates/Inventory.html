@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block mainbody %}
+{% load static %}
+{% csrf_token %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap-4.3.1-dist/css/bootstrap.css' %}"/>
+    <link rel="stylesheet" href="{% static 'js/leaflet.js/leaflet.css' %}"/>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'css/bootstrap-4.3.1-dist/js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/leaflet.js/leaflet.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="{% static 'js/main.js' %}"></script>  
+	<script src="{% static 'js/plotly-latest.min.js' %}"></script>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="Monitor">機台監控</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="Schedule">生產排程</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="Quality">品質管制</a>
+		</li>
+		<li class="nav-item active">
+			<a class="nav-link" href="Inventory">庫存管理</a>
+		</li>
+	</ul>
+</nav>
+<div id="globalDiv">
+	<div id="invListDiv" style="width: 49%; float: left;">
+		<table class="table">
+	        <thead class="thead-dark">
+	            <tr>
+	                <th>編號</th>
+	                <th>名稱</th>
+	                <th>數量</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr>
+	                <td id="invListNo1">-</td>
+	                <td id="invListName1">-</td>
+	                <td id="invListQuantity1">-</td>
+	            </tr>
+	            <tr>
+	                <td id="invListNo2">-</td>
+	                <td id="invListName2">-</td>
+	                <td id="invListQuantity2">-</td>
+	            </tr>
+	            <tr>
+	                <td id="invListNo3">-</td>
+	                <td id="invListName3">-</td>
+	                <td id="invListQuantity3">-</td>
+	            </tr>
+				<tr>
+	                <td id="invListNo4">-</td>
+	                <td id="invListName4">-</td>
+	                <td id="invListQuantity4">-</td>
+	            </tr>
+	        </tbody>
+		</table>
+		<div style="margin-top: 7%">
+			<p style="text-align: center">即時庫存資訊：</p>
+			<textarea id="inventoryMassageBox"></textarea>
+		</div>
+	</div>
+
+	<div id="invTimeChartDiv" style="float: right; width: 49%; text-align: center">	
+		<div>
+			<div>
+				<p class="invTineChartText">料號001庫存量</p>
+			</div>
+			<div id="invTimeChart1">
+				
+			</div>
+		</div>
+		<div>
+			<div>
+				<p class="invTineChartText">料號002庫存量</p>
+			</div>
+			<div id="invTimeChart2">
+				
+			</div>
+		</div>
+		<div>
+			<div>
+				<p class="invTineChartText">料號003庫存量</p>
+			</div>
+			<div id="invTimeChart3">
+				
+			</div>
+		</div>
+		<div>
+			<div>
+				<p class="invTineChartText">料號004庫存量</p>
+			</div>
+			<div id="invTimeChart4">
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+</head>
+{% endblock %}

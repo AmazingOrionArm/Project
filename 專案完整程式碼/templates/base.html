@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'js/leaflet.js/leaflet.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap-4.3.1-dist/css/bootstrap.css' %}"/>
+	<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static 'css/bootstrap-4.3.1-dist/js/bootstrap.js' %}"></script>
+	<script src="{% static 'js/leaflet.js/leaflet.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Manufacturing Execution System</title>
+
+  </head>
+
+  <body>
+
+    {% block mainbody %}
+
+    {% endblock %}
+
+  </body>
+</html>

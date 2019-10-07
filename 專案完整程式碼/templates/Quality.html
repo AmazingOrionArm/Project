@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block mainbody %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/bootstrap-4.3.1-dist/css/bootstrap.css' %}"/>
+<link rel="stylesheet" href="{% static 'js/leaflet.js/leaflet.css' %}"/>
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'css/bootstrap-4.3.1-dist/js/bootstrap.js' %}"></script>
+<script src="{% static 'js/leaflet.js/leaflet.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="{% static 'js/main.js' %}"></script>  
+<script src="{% static 'js/plotly-latest.min.js' %}"></script>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Monitor">機台監控</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Schedule">生產排程</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="Quality">品質管制</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Inventory">庫存管理</a>
+        </li>
+    </ul>
+</nav>
+
+<div>
+	<div id="leftDiv" style="width: 60%; float: left;">
+        <div id = "Xbar_div" style="height: 45%">
+
+        </div>
+        <div id = "R_div" style="height: 45%">
+
+        </div>
+    </div>		
+    <div id="reightDiv" style="width: 35%; height: 100%; float: left;">
+        <div class="spcTextDiv">
+            <p id="cpkGrade" style="font-weight: bold">製程能力指標等級 : -</p>
+            <p style="font-size: 16px">規格上下限：10.25 ~ 9.75 g</p>
+        </div>
+        <div id="caDiv" class="spcTextDiv">
+            <p id="caText">Ca : -</p>
+        </div>
+        <div id="cpDiv" class="spcTextDiv">
+            <p id="cpText">Cp : -</p>
+        </div>
+        <div id="cpkDiv" class="spcTextDiv">
+            <p id="cpkText">Cpk : -</p>
+        </div>
+    </div>
+    <button id="apple">
+
+    </button>
+</div>
+
+{% endblock %}
